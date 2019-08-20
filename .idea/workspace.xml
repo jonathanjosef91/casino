@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/casinoData/CasinoExceptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casinoData/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/BlackJackConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJackConst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainClass.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566305749733</updated>
-      <workItem from="1566305751138" duration="1654000" />
+      <workItem from="1566305751138" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="black jack">
       <created>1566306234966</created>
@@ -95,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566307003212</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ready to work">
+      <created>1566307460793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566307460793</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +121,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="black jack" />
     <MESSAGE value="fix card" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix card" />
+    <MESSAGE value="Ready to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready to work" />
   </component>
 </project>

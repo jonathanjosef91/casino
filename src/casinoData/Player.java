@@ -11,17 +11,17 @@ public class Player {
     public Hand hand;
 
     //C'tors
-    Player(String name,int balance){
+    public Player(String name,int balance){
         this.name = name;
         this.balance = balance;
     }
-    Player(int balance){
+    public Player(int balance){
         this(defaultName,balance);
     }
-    Player(String name){
+    public Player(String name){
         this(name,defaultBalance);
     }
-    Player(){
+    public Player(){
         this(defaultName,defaultBalance);
     }
 

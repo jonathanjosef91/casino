@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/BlackJack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoData/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/BlackJackConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJackConst.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainClass.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,6 +48,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainClass" />
+      <module name="casino" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.mainClass" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -58,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566305749733</updated>
-      <workItem from="1566305751138" duration="1225000" />
+      <workItem from="1566305751138" duration="1654000" />
     </task>
     <task id="LOCAL-00001" summary="black jack">
       <created>1566306234966</created>
@@ -74,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566306365752</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix card">
+      <created>1566307003212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566307003212</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

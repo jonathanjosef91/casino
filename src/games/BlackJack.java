@@ -28,7 +28,7 @@ public class BlackJack {
     }
 
     public boolean getCards(){
-
+        return true;
     }
     public static int getHandValue(Hand h) throws Exception{
         int counter = 0;

@@ -7,4 +7,10 @@ public class CasinoExceptions {
             return "Out of money";
         }
     }
+    public static class yesOrNo extends Exception{
+        @Override
+        public String getMessage() {
+            return "Please enter y or n";
+        }
+    }
 }

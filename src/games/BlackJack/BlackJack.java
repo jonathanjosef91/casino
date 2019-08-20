@@ -1,12 +1,10 @@
-package games;
+package games.blackJack;
 
-import java.rmi.activation.ActivationID;
 import java.util.Scanner;  // Import the Scanner class
 import casinoData.*;
 import card.Card;
 import card.Deck;
 import card.Hand;
-
 
 public class BlackJack {
     public static void playBlackJack(Player p1) throws Exception{
@@ -20,8 +18,9 @@ public class BlackJack {
         Scanner input = new Scanner(System.in);  // Create a Scanner object
         boolean keepPlay = true;
         int bid;
-        char answer;
-
+        char charInput;
+        boolean answer;
+        Hand AIhand;
         System.out.println("Hi "+ p1.getName() + "! Welcome to the Black Jack table");
 
         do {
@@ -32,18 +31,42 @@ public class BlackJack {
             deck.shuffle();
             p1.hand = new Hand(2);
             p1.hand.fillHand(deck);
+            AIhand = new Hand(2);
+            AIhand.fillHand(deck);
 
             //Start Play
-            System.out.println("Your hand:");
-            p1.hand.print();
-            System.out.println("Hand Value: " + getHandValue(p1.hand));
-            System.out.println("Would you like to take another Card? y/n");
+            System.out.println("Dealer first card: ");
+            AIhand.getFirst().print();
+
+            //Next loop - Player get cards
             do{
-                answer = input.next().charAt(0);
-                if(checkYesNoAnswer(answer))
+                System.out.println("Your hand:");
+                p1.hand.print();
+                System.out.println("Hand Value: " + getHandValue(p1.hand));
+                if(getHandValue(p1.hand) > Const.BLACK_JACK){
+                    System.out.println("Im sorry, you out!");
                     break;
-                System.out.println("Please enter y or n");
-            }while(true);
+                }
+                System.out.println("Would you like to take another Card?");
+
+                //Next loop - to get a y/n answer
+                do {
+                    try {
+                        charInput = input.next().charAt(0);
+                        answer = checkYesNoAnswer(charInput);
+                        break;
+                    } catch (CasinoExceptions.yesOrNo e) {
+                        e.getMessage();
+                    }
+                } while (true);
+
+                if (answer)
+                    p1.hand.setCard(deck.getNextCard());
+
+            }while (answer);
+
+            //Next loop - Dealer get cards
+
 
             System.out.println("Would you like to keep playing?");
         }while (keepPlay);
@@ -51,11 +74,13 @@ public class BlackJack {
         System.out.println("Bye! hope too see you soon");
     }
 
-    private static boolean checkYesNoAnswer(char answer){
-        return (answer == 'y' || answer == 'Y' || answer == 'n' || answer == 'N');
-    }
-    private static boolean getCards(){
-        return true;
+    private static boolean checkYesNoAnswer(char answer)throws CasinoExceptions.yesOrNo{
+        if(answer == 'y' || answer == 'Y')
+            return true;
+        else if(answer == 'n' || answer == 'N')
+            return false;
+
+        throw new CasinoExceptions.yesOrNo();
     }
 
     private static int setBid(Player p1) {
@@ -79,7 +104,6 @@ public class BlackJack {
         return bid;
     }
 
-
     private static int getHandValue(Hand h) throws Exception{
         int counter = 0;
         int numberOfAces = 0;
@@ -88,17 +112,17 @@ public class BlackJack {
         {
             c = h.getNextCard();
             if (c.getValue() == 1) {
-                counter += BlackJackConst.Values.HIGH_ACE;
+                counter += Const.HIGH_ACE;
                 numberOfAces++;
-            }else if(c.getValue()>= BlackJackConst.Values.ROYAL_VALUE){
-                counter+=BlackJackConst.Values.ROYAL_VALUE;
+            }else if(c.getValue()>= Const.ROYAL_VALUE){
+                counter+=Const.ROYAL_VALUE;
             }else{
                 counter += c.getValue();
             }
         }
         while (numberOfAces-- > 0)
-            if (counter > BlackJackConst.Values.BLACK_JACK)
-                counter += (BlackJackConst.Values.LOW_ACE - BlackJackConst.Values.HIGH_ACE);
+            if (counter > Const.BLACK_JACK)
+                counter += (Const.LOW_ACE - Const.HIGH_ACE);
 
         return counter;
     }

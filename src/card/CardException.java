@@ -1,5 +1,5 @@
 package card;
-public class CardException {
+class CardException {
     public static class badInput extends Exception{
         @Override
         public String getMessage() {

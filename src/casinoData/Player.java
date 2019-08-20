@@ -7,22 +7,26 @@ public class Player {
     private int balance;
     private static String defaultName = "AI";
     private static int defaultBalance = 5000;
+    private String userName;
+    private String password;
 
     public Hand hand;
 
     //C'tors
-    public Player(String name,int balance){
+    public Player(String name,int balance,String userName,String pass){
+        this.password = pass;
+        this.userName = userName;
         this.name = name;
         this.balance = balance;
     }
-    public Player(int balance){
-        this(defaultName,balance);
+    public Player(int balance,String userName,String pass){
+        this(defaultName,balance,userName,pass);
     }
-    public Player(String name){
-        this(name,defaultBalance);
+    public Player(String name,String userName,String pass){
+        this(name,defaultBalance,userName,pass);
     }
-    public Player(){
-        this(defaultName,defaultBalance);
+    public Player(String userName,String pass){
+        this(defaultName,defaultBalance,userName,pass);
     }
 
     public String getName() {

@@ -24,4 +24,10 @@ class CardException {
             return "Empty collection";
         }
     }
+    public static class handHasntMax extends Exception{
+        @Override
+        public String getMessage() {
+            return "Hand with no max cards cannot be filled";
+        }
+    }
 }

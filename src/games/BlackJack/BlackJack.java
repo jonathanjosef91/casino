@@ -29,10 +29,10 @@ public class BlackJack {
             //Set game
             Deck deck = new Deck();
             deck.shuffle();
-            p1.hand = new Hand(2);
-            p1.hand.fillHand(deck);
-            AIhand = new Hand(2);
-            AIhand.fillHand(deck);
+            p1.hand = new Hand();
+            p1.hand.setCards(deck,Const.START_HAND);
+            AIhand = new Hand();
+            AIhand.setCards(deck,Const.START_HAND);
 
             //Start Play
             System.out.println("Dealer first card: ");
@@ -41,10 +41,11 @@ public class BlackJack {
             //Next loop - Player get cards
             do{
                 System.out.println("Your hand:");
-                p1.hand.print();
+                p1.hand.print(); //TODO: NULL
                 System.out.println("Hand Value: " + getHandValue(p1.hand));
                 if(getHandValue(p1.hand) > Const.BLACK_JACK){
                     System.out.println("Im sorry, you out!");
+                    p1.hand = new Hand();
                     break;
                 }
                 System.out.println("Would you like to take another Card?");
@@ -65,10 +66,41 @@ public class BlackJack {
 
             }while (answer);
 
+
             //Next loop - Dealer get cards
+            while(getHandValue(p1.hand) > 0 && getHandValue(AIhand) < Const.AI_DRAW){
+                System.out.println("Dealer draw one");
+                AIhand.setCard(deck.getNextCard());
+            }
+            if(getHandValue(AIhand) > Const.BLACK_JACK){
+                System.out.println("Dealer is out!");
+                AIhand = new Hand(2);
+            }
 
+            //Game Result
+            if(checkHands(p1.hand, AIhand) > 0){
+                System.out.println("You won " + bid);
+                p1.deposit(2*bid);
+            }else if(checkHands(p1.hand, AIhand) == 0){
+                System.out.println("It's a Tie");
+                p1.deposit(bid);
+            }else{
+                System.out.println("Sorry, better luck next time");
+            }
 
+            //Keep Playing
             System.out.println("Would you like to keep playing?");
+            //Next loop - to get a y/n answer
+            do {
+                try {
+                    charInput = input.next().charAt(0);
+                    keepPlay = checkYesNoAnswer(charInput);
+                    break;
+                } catch (CasinoExceptions.yesOrNo e) {
+                    e.getMessage();
+                }
+            } while (true);
+
         }while (keepPlay);
 
         System.out.println("Bye! hope too see you soon");
@@ -127,4 +159,8 @@ public class BlackJack {
         return counter;
     }
 
+    //Assuming non of the players got knock out
+    private static int checkHands(Hand h1, Hand h2) throws Exception{
+        return getHandValue(h1) - getHandValue(h2);
+    }
 }

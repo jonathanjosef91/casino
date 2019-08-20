@@ -1,65 +1,71 @@
 package card;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class Hand {
-    private Card cards[];
-    private int handIterator;
-
-    public int length;
+    private LinkedList<Card> cards;
+    private Iterator<Card> handIterator;
+    private boolean hasMax;
+    private int maxHand;
 
     //C'tor
     public Hand(){
-        this(5);
+        this(0);
     }
     public Hand(int maxHand){
-        length = maxHand;
-        cards = new Card[length];
-        handIterator = 0;
+        cards = new LinkedList<Card>();
+        this.maxHand = maxHand;
+        this.hasMax = maxHand > 0;
+        handIterator = cards.iterator();
     }
 
     //Public Methods
     public void setCard(Card c) throws Exception {
         if(c == null)
             throw new NullPointerException();
-        if(handIterator >= cards.length)
+        if( hasMax && maxHand <= cards.size())
             throw new CardException.fullHand();
-        cards[handIterator++] = c;
+        cards.add(c);
+    }
+    public void setCards(Deck d, int numberOfCards) throws Exception{
+        for(int i = 0; i < numberOfCards ; i++)
+            setCard(d.getNextCard());
     }
     public void fillHand(Deck d) throws Exception{
         if (d==null)
             throw new NullPointerException();
+        if (!hasMax)
+            throw new CardException.handHasntMax();
 
-        while(handIterator < cards.length)
+        while(cards.size() < maxHand)
             setCard(d.getNextCard());
 
-        getFirst();
+        this.getFirst();
         this.sort();
     }
     public boolean hasNext(){
-        return (length-handIterator) > 0;
+        return handIterator.hasNext();
     }
     public Card getNextCard() throws Exception{
-        return getCard(handIterator++);
+        return handIterator.next();
     }
     public Card getCard(int i) throws Exception{
-        if(i<0 || i>=cards.length)
+        if(i<0 || i>=cards.size())
             throw new CardException.badInput();
-
-        if(cards[i] != null)
-            return cards[i];
-        throw new CardException.emptyCollection();
+        return cards.get(i);
     }
     public void print(){
-        for(Card c:cards)
-            c.print();
+        for(int i = 0; i < cards.size(); i++)
+            cards.get(i).print();
     }
     public Card getFirst(){
-        handIterator = 0;
-        return cards[handIterator];
+        handIterator = cards.iterator();
+        return cards.getFirst();
     }
-
     private void sort(){
-        Arrays.sort(cards);
+        Collections.sort(cards);
     }
 }

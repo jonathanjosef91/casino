@@ -1,4 +1,4 @@
-package Card;
+package card;
 
 public class Card implements Comparable<Card>{
     public static int highestValue = 13;

@@ -1,4 +1,4 @@
-package Card;
+package card;
 public class CardException {
     public static class badInput extends Exception{
         @Override

@@ -1,4 +1,4 @@
-package Card;
+package card;
 
 public class CardType {
     public static String cardTypes[] = {"Club","Diamond","Heart","Spade"};

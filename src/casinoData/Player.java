@@ -1,4 +1,6 @@
-import Card.*;
+package casinoData;
+
+import card.*;
 
 public class Player {
     private String name;

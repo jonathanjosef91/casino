@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="" />
+    <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/casinoData/CasinoExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566305749733</updated>
-      <workItem from="1566305751138" duration="5387000" />
+      <workItem from="1566305751138" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="black jack">
       <created>1566306234966</created>
@@ -96,14 +100,7 @@
       <option name="project" value="LOCAL" />
       <updated>1566307460793</updated>
     </task>
-    <task id="LOCAL-00005" summary="work on black jack">
-      <created>1566310864970</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1566310864970</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +122,6 @@
     <MESSAGE value="black jack" />
     <MESSAGE value="fix card" />
     <MESSAGE value="Ready to work" />
-    <MESSAGE value="work on black jack" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on black jack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready to work" />
   </component>
 </project>

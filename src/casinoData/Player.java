@@ -12,6 +12,14 @@ public class Player {
 
     public Hand hand;
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     //C'tors
     public Player(String name,int balance,String userName,String pass){
         this.password = pass;

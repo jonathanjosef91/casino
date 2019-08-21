@@ -86,4 +86,14 @@ public class Data {
 
         writer.close();
     }
+
+    public static Player load(String userName) throws IOException{
+        String path =  new File("."). getCanonicalPath() +"\\users\\" +userName+".txt";
+        BufferedReader reader = new BufferedReader(new FileReader(path));
+        String password = reader.readLine();
+        String name = reader.readLine();
+        int balance = Integer.parseInt(reader.readLine());
+
+        return new Player(name, balance, userName, password);
+    }
 }

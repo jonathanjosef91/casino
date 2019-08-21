@@ -64,8 +64,8 @@ public class Utils {
             System.out.println("Would you like to keep playing?");
             keepPlay = Utils.inYesNoAnswer();
         }
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
         return keepPlay;
     }
+
+    //TODO : scanInt - safe scan for a case of getting string
 }

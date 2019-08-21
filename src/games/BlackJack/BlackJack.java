@@ -1,6 +1,5 @@
 package games.blackJack;
 
-
 import java.util.Scanner;  // Import the Scanner class
 import casinoData.*;
 import card.Card;
@@ -88,7 +87,6 @@ public class BlackJack {
 
         System.out.println("Bye! hope too see you soon");
     }
-
 
     private static int getHandValue(Hand h) throws Exception{
         int counter = 0;

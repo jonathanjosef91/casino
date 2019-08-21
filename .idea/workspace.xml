@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/casinoUtils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casinoData/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casinoUtils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoUtils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/card/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Hand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/BlackJack/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/Const.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +33,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">

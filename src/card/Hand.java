@@ -43,7 +43,6 @@ public class Hand {
         while(cards.size() < maxHand)
             setCard(d.getNextCard());
 
-        this.getFirst();
         this.sort();
     }
     public boolean hasNext(){

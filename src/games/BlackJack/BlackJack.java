@@ -47,53 +47,50 @@ public class BlackJack {
                 p1.hand.print();
                 System.out.println("Hand Value: " + getHandValue(p1.hand));
                 if(getHandValue(p1.hand) > Const.BLACK_JACK){
-                    System.out.println("Im sorry, you out!");
-                    p1.hand = new Hand();
+                    System.out.println("Im sorry, you're out!");
                     break;
                 }
+
                 System.out.println("Would you like to take another Card?");
+                if (!Utils.inYesNoAnswer())
+                    break;
 
-                answer = Utils.inYesNoAnswer();
+                 p1.hand.setCard(deck.getNextCard());
+            }while (true);    //End of "Player get cards"
 
-                if (answer)
-                    p1.hand.setCard(deck.getNextCard());
-
-            }while (answer);    //End of "Player get cards"
+            if(getHandValue(p1.hand) > Const.BLACK_JACK){
+                Utils.resultGame(-1,p1,bid);
+                continue;
+            }
 
             //Next loop - Dealer get cards
-            //todo: PRINTS
             while(getHandValue(p1.hand) > 0 && getHandValue(AIhand) < Const.AI_DRAW){
                 System.out.println("Dealer draw one");
                 AIhand.setCard(deck.getNextCard());
             }
             if(getHandValue(AIhand) > Const.BLACK_JACK){
                 System.out.println("Dealer is out!");
-                AIhand = new Hand(2);
+                Utils.resultGame(1,p1,bid);
+                continue;
             }
 
             //Game Result
-            if(checkHands(p1.hand, AIhand) > 0){
-                System.out.println("You won " + bid);
-                p1.deposit(2*bid);
-            }else if(checkHands(p1.hand, AIhand) == 0){
-                System.out.println("It's a Tie");
-                p1.deposit(bid);
-            }else{
-                System.out.println("Sorry, better luck next time");
-            }
+            System.out.println("Your hand:");
+            p1.hand.print();
+            System.out.println("Hand Value: " + getHandValue(p1.hand));
+            System.out.println("Dealer's hand:");
+            AIhand.print();
+            System.out.println("Hand Value: " + getHandValue(AIhand));
 
-            //Keep Playing
-            System.out.println("Would you like to keep playing?");
-            keepPlay = Utils.inYesNoAnswer();
+            Utils.resultGame(getHandValue(p1.hand) - getHandValue(AIhand),p1, bid);
 
-        }while (keepPlay);
+        }while (Utils.keepPlaying(p1));
 
         System.out.println("Bye! hope too see you soon");
     }
 
 
     private static int getHandValue(Hand h) throws Exception{
-        //if (h == null) throw new CasinoExceptions.outOfMoney();
         int counter = 0;
         int numberOfAces = 0;
         Card c;
@@ -104,10 +101,8 @@ public class BlackJack {
             if (c.getValue() == 1) {
                 counter += Const.HIGH_ACE;
                 numberOfAces++;
-            }else if(c.getValue()>= Const.ROYAL_VALUE){
-                counter+=Const.ROYAL_VALUE;
             }else{
-                counter += c.getValue();
+                counter += Math.min(c.getValue(), Const.ROYAL_VALUE);
             }
         }
         while (numberOfAces-- > 0)

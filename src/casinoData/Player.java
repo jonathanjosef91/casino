@@ -36,9 +36,9 @@ public class Player {
         return balance;
     }
 
-    public void withdraw(int bid) throws Exception{
+    public void withdraw(int bid) throws CasinoExceptions.outOfMoney{
         if( balance < bid)
-            throw new outOfMoney();
+            throw new CasinoExceptions.outOfMoney();
         balance -= bid;
     }
     public void deposit(int prize){

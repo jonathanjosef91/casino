@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/casinoUtils/Utils.java" afterDir="false" />
+    <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="Black jack already done.">
+      <change afterPath="$PROJECT_DIR$/src/casinoUtils/Prints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/card/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoData/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoUtils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoUtils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566316716601</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Black jack already done.">
+      <created>1566391791401</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566391791401</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +147,7 @@
     <MESSAGE value="fix card" />
     <MESSAGE value="Ready to work" />
     <MESSAGE value="Update games package - has inner &quot;blackJack package now&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update games package - has inner &quot;blackJack package now&quot;" />
+    <MESSAGE value="Black jack already done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Black jack already done." />
   </component>
 </project>

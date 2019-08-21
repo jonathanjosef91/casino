@@ -22,7 +22,7 @@ public class Utils {
     }
 
     //return the bid
-    public static int setBid(Player p1) {
+    public static int setBid(Player p1) throws CasinoExceptions.outOfMoney {
         int bid;
         Scanner input = new Scanner(System.in);
         System.out.println("You have " + p1.getBalance() + "$.");
@@ -36,10 +36,36 @@ public class Utils {
             if (bid <= p1.getBalance())
                 break;
 
-            System.out.println("I'm afraid you dont own that much");
+            System.out.println("I'm afraid you don't own that much");
         } while (true);
 
-        p1.deposit(bid);
+        p1.withdraw(bid);
         return bid;
+    }
+
+    public static void resultGame(int won, Player p1, int bid){
+        if(won > 0){
+            System.out.println("You won " + bid);
+            p1.deposit(2*bid);
+        }else if(won == 0){
+            System.out.println("It's a Tie");
+            p1.deposit(bid);
+        }else{
+            System.out.println("Sorry, better luck next time");
+        }
+    }
+
+    public static boolean keepPlaying(Player p){
+        boolean keepPlay;
+        if ( p.getBalance() <= 0){
+            System.out.println("You're out of money");
+            keepPlay = false;
+        }else{
+            System.out.println("Would you like to keep playing?");
+            keepPlay = Utils.inYesNoAnswer();
+        }
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        return keepPlay;
     }
 }

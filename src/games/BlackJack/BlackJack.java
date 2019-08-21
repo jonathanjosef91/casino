@@ -1,10 +1,12 @@
 package games.blackJack;
 
+
 import java.util.Scanner;  // Import the Scanner class
 import casinoData.*;
 import card.Card;
 import card.Deck;
 import card.Hand;
+import casinoUtils.*;
 
 public class BlackJack {
     public static void playBlackJack(Player p1) throws Exception{
@@ -23,8 +25,9 @@ public class BlackJack {
         Hand AIhand;
         System.out.println("Hi "+ p1.getName() + "! Welcome to the Black Jack table");
 
+        //Every iterate represent a game.
         do {
-            bid = setBid(p1);
+            bid = Utils.setBid(p1);
 
             //Set game
             Deck deck = new Deck();
@@ -41,7 +44,7 @@ public class BlackJack {
             //Next loop - Player get cards
             do{
                 System.out.println("Your hand:");
-                p1.hand.print(); //TODO: NULL
+                p1.hand.print();
                 System.out.println("Hand Value: " + getHandValue(p1.hand));
                 if(getHandValue(p1.hand) > Const.BLACK_JACK){
                     System.out.println("Im sorry, you out!");
@@ -50,24 +53,15 @@ public class BlackJack {
                 }
                 System.out.println("Would you like to take another Card?");
 
-                //Next loop - to get a y/n answer
-                do {
-                    try {
-                        charInput = input.next().charAt(0);
-                        answer = checkYesNoAnswer(charInput);
-                        break;
-                    } catch (CasinoExceptions.yesOrNo e) {
-                        e.getMessage();
-                    }
-                } while (true);
+                answer = Utils.inYesNoAnswer();
 
                 if (answer)
                     p1.hand.setCard(deck.getNextCard());
 
-            }while (answer);
-
+            }while (answer);    //End of "Player get cards"
 
             //Next loop - Dealer get cards
+            //todo: PRINTS
             while(getHandValue(p1.hand) > 0 && getHandValue(AIhand) < Const.AI_DRAW){
                 System.out.println("Dealer draw one");
                 AIhand.setCard(deck.getNextCard());
@@ -90,56 +84,20 @@ public class BlackJack {
 
             //Keep Playing
             System.out.println("Would you like to keep playing?");
-            //Next loop - to get a y/n answer
-            do {
-                try {
-                    charInput = input.next().charAt(0);
-                    keepPlay = checkYesNoAnswer(charInput);
-                    break;
-                } catch (CasinoExceptions.yesOrNo e) {
-                    e.getMessage();
-                }
-            } while (true);
+            keepPlay = Utils.inYesNoAnswer();
 
         }while (keepPlay);
 
         System.out.println("Bye! hope too see you soon");
     }
 
-    private static boolean checkYesNoAnswer(char answer)throws CasinoExceptions.yesOrNo{
-        if(answer == 'y' || answer == 'Y')
-            return true;
-        else if(answer == 'n' || answer == 'N')
-            return false;
-
-        throw new CasinoExceptions.yesOrNo();
-    }
-
-    private static int setBid(Player p1) {
-        int bid;
-        Scanner input = new Scanner(System.in);
-        System.out.println("You have " + p1.getBalance() + "$.");
-        System.out.println("How much money do you want to bet on?");
-        do {
-            bid = input.nextInt();
-            if (bid <= 0) {
-                System.out.println("Please enter a positive number");
-                continue;
-            }
-            if (bid <= p1.getBalance())
-                break;
-
-            System.out.println("I'm afraid you dont own that much");
-        } while (true);
-
-        p1.deposit(bid);
-        return bid;
-    }
 
     private static int getHandValue(Hand h) throws Exception{
+        //if (h == null) throw new CasinoExceptions.outOfMoney();
         int counter = 0;
         int numberOfAces = 0;
         Card c;
+        h.getFirst();
         while (h.hasNext())
         {
             c = h.getNextCard();

@@ -58,8 +58,7 @@ public class Hand {
         return cards.get(i);
     }
     public void print(){
-        for(int i = 0; i < cards.size(); i++)
-            cards.get(i).print();
+        for(Iterator<Card> i = cards.iterator(); i.hasNext(); i.next().print());
     }
     public Card getFirst(){
         handIterator = cards.iterator();

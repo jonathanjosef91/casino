@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/users/amirpust1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/casinoData/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casinoData/Registraition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Registraition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/BlackJack/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/amirpust.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users/amirpust.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566305749733</updated>
       <workItem from="1566305751138" duration="4955000" />
-      <workItem from="1566461173075" duration="1976000" />
+      <workItem from="1566461173075" duration="2321000" />
     </task>
     <task id="LOCAL-00001" summary="black jack">
       <created>1566306234966</created>
@@ -147,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566462213975</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="game Updated">
+      <created>1566463288920</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1566463288920</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +177,8 @@
     <MESSAGE value="Ready to work" />
     <MESSAGE value="Update games package - has inner &quot;blackJack package now&quot;" />
     <MESSAGE value="updated login" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated login" />
+    <MESSAGE value="game Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="game Updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

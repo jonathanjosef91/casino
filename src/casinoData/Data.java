@@ -32,7 +32,7 @@ public class Data {
         Scanner in = new Scanner(System.in);
         System.out.println("Are you registered?(y/n)");
         String answer = in.next();
-        if (answer == "y"){
+        if (answer.equals("y")){
             System.out.println("Enter user name:");
             String  user = in.next();
             System.out.println("Enter password:");

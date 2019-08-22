@@ -85,6 +85,7 @@ public class BlackJack {
 
         }while (Utils.keepPlaying(p1));
         Data.save(p1);
+        System.out.println("Keep in mind your balance is: " + p1.getBalance());
         System.out.println("Bye! hope too see you soon");
     }
 

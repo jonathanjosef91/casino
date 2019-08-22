@@ -59,4 +59,11 @@ public class Player {
             return "Bad Input";
         }
     }
+
+    public void printPlayer(){
+        System.out.println("User name: "+ this.getUserName());
+        System.out.println("\nPassword: "+ this.getPassword());
+        System.out.println("\nName: "+ this.getName());
+        System.out.println("\nBalance: "+ this.getBalance());
+    }
 }

@@ -7,17 +7,17 @@ import java.util.Scanner;
 public class Registraition {
     public static void register() throws IOException {
         Scanner in = new Scanner(System.in);
-        System.out.println("Hello and welcome to our Casino\n Please enter user name:\n");
+        System.out.println("Hello and welcome to our Casino\nPlease enter user name:");
         String userName = in.next();
         String path =  new File("."). getCanonicalPath() +"\\users";
-        while(!new File(path + "\\" + userName +".txt").exists()){
+        while(new File(path + "\\" + userName +".txt").exists()){
             System.out.println("User name "+ userName + "already exists\nPlease enter different user name");
             userName = in.next();
         }
-        System.out.println("Please enter your password:\n");
+        System.out.println("Please enter your password:");
         String password = in.next();
-        System.out.println("Please enter your name:\n");
-        String name = in.nextLine();
+        System.out.println("Please enter your name:");
+        String name = in.next();
         Data.save(new Player(name,userName,password));
     }
 

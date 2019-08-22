@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/casinoUtils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/amirpust.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/jonu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/card/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoData/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoData/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoData/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casinoData/Registraition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Registraition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/amir.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +51,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="casinoData.Login" />
+      <module name="casino" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="casinoData.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mainClass" />
       <module name="casino" />
@@ -57,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login" />
         <item itemvalue="Application.mainClass" />
       </list>
     </recent_temporary>
@@ -72,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566305749733</updated>
       <workItem from="1566305751138" duration="4955000" />
+      <workItem from="1566461173075" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="black jack">
       <created>1566306234966</created>
@@ -115,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566316716601</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update games package - has inner &quot;blackJack package now&quot;">
+      <created>1566402585331</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566402585331</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +152,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -139,5 +167,16 @@
     <MESSAGE value="Ready to work" />
     <MESSAGE value="Update games package - has inner &quot;blackJack package now&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="Update games package - has inner &quot;blackJack package now&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/casinoData/Login.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

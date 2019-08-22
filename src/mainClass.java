@@ -1,10 +1,11 @@
+import casinoData.Data;
 import casinoData.Player;
-import games.blackJack.BlackJack;
+import games.BlackJack.BlackJack;
 
 public class mainClass {
     public static void main(String args[]){
         try{
-            BlackJack.playBlackJack(new Player("",""));
+            games.BlackJack.BlackJack.playBlackJack(Data.openGame());
         }catch(Exception e){
             System.out.println(e.getMessage());
         };

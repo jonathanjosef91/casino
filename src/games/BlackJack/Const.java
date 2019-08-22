@@ -1,4 +1,4 @@
-package games.blackJack;
+package games.BlackJack;
 
 class Const {
     static int BLACK_JACK = 21;

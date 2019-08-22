@@ -1,4 +1,4 @@
-package games.blackJack;
+package games.BlackJack;
 
 import java.util.Scanner;  // Import the Scanner class
 import casinoData.*;
@@ -32,7 +32,7 @@ public class BlackJack {
             Deck deck = new Deck();
             deck.shuffle();
             p1.hand = new Hand();
-            p1.hand.setCards(deck,Const.START_HAND);
+            p1.hand.setCards(deck, Const.START_HAND);
             AIhand = new Hand();
             AIhand.setCards(deck,Const.START_HAND);
 
@@ -84,7 +84,7 @@ public class BlackJack {
             Utils.resultGame(getHandValue(p1.hand) - getHandValue(AIhand),p1, bid);
 
         }while (Utils.keepPlaying(p1));
-
+        Data.save(p1);
         System.out.println("Bye! hope too see you soon");
     }
 

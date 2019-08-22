@@ -27,4 +27,20 @@ public class Data {
 
         return new Player(name, balance, userName, password);
     }
+
+    public static Player openGame() throws IOException {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Are you registered?(y/n)");
+        String answer = in.next();
+        if (answer == "y"){
+            System.out.println("Enter user name:");
+            String  user = in.next();
+            System.out.println("Enter password:");
+            String pass = in.next();
+           return Login.logIn(user,pass);
+        }
+        else {
+            return load(Registraition.register());
+        }
+    }
 }

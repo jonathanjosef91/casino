@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b674adf9-c746-479b-b9e3-dea394dd7616" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/users/amirpust.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/jonu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/amirpust1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/casinoData/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casinoData/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casinoData/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/casinoData/Registraition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casinoData/Registraition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/amir.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/BlackJack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/BlackJack/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/BlackJack/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainClass.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Login">
+  <component name="RunManager" selected="Application.mainClass">
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="casinoData.Login" />
       <module name="casino" />
@@ -74,8 +73,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Login" />
         <item itemvalue="Application.mainClass" />
+        <item itemvalue="Application.Login" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566305749733</updated>
       <workItem from="1566305751138" duration="4955000" />
-      <workItem from="1566461173075" duration="911000" />
+      <workItem from="1566461173075" duration="1976000" />
     </task>
     <task id="LOCAL-00001" summary="black jack">
       <created>1566306234966</created>
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566402585331</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated login">
+      <created>1566462213975</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566462213975</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +172,8 @@
     <MESSAGE value="fix card" />
     <MESSAGE value="Ready to work" />
     <MESSAGE value="Update games package - has inner &quot;blackJack package now&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update games package - has inner &quot;blackJack package now&quot;" />
+    <MESSAGE value="updated login" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

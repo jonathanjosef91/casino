@@ -82,7 +82,7 @@ public class BlackJack {
             System.out.println("Hand Value: " + getHandValue(AIhand));
 
             Utils.resultGame(getHandValue(p1.hand) - getHandValue(AIhand),p1, bid);
-
+            Data.save(p1);
         }while (Utils.keepPlaying(p1));
         Data.save(p1);
         System.out.println("Keep in mind your balance is: " + p1.getBalance());

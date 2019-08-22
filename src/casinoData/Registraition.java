@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Registraition {
-    public static String register() throws IOException {
+    public static String register() throws IOException {//TODO: make sure that user name is valid
         Scanner in = new Scanner(System.in);
         System.out.println("Hello and welcome to our Casino\nPlease enter user name:");
         String userName = in.next();
